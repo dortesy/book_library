@@ -74,7 +74,7 @@ class BookCard extends StatelessWidget {
                     if (book.publishDate.isNotEmpty) ...[
                       SizedBox(height: 8),
                       Text(
-                        'Published: ${book.publishDate}',
+                        'Опубликовано: ${book.publishDate}',
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.grey[600],
@@ -84,7 +84,7 @@ class BookCard extends StatelessWidget {
                     if (book.pages > 0) ...[
                       SizedBox(height: 4),
                       Text(
-                        'Pages: ${book.pages}',
+                        'Страниц: ${book.pages}',
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.grey[600],

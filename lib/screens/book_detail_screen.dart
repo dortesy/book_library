@@ -59,7 +59,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
         await launchUrl(uri, mode: LaunchMode.externalApplication);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Could not open preview')),
+          SnackBar(content: Text('Не удалось открыть предпросмотр')),
         );
       }
     }
@@ -119,7 +119,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Book Details'),
+        title: const Text('Детали книги'),
         actions: [
           IconButton(
             icon: Icon(
@@ -141,7 +141,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                   child: ElevatedButton.icon(
                     onPressed: _openPreview,
                     icon: Icon(Icons.book),
-                    label: Text('Read Preview'),
+                    label: Text('Читать предпросмотр'),
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                     ),
@@ -157,7 +157,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                 padding: const EdgeInsets.all(16.0),
                 child: Center(
                   child: Text(
-                    'Preview not available',
+                    'Предпросмотр недоступен',
                     style: TextStyle(
                       color: Colors.grey,
                       fontStyle: FontStyle.italic,
@@ -198,20 +198,20 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                   const SizedBox(height: 16),
                   if (widget.book.publishDate.isNotEmpty) ...[
                     Text(
-                      'Published: ${widget.book.publishDate}',
+                      'Опубликовано: ${widget.book.publishDate}',
                       style: const TextStyle(fontSize: 16),
                     ),
                     const SizedBox(height: 8),
                   ],
                   if (widget.book.pages > 0) ...[
                     Text(
-                      'Pages: ${widget.book.pages}',
+                      'Страниц: ${widget.book.pages}',
                       style: const TextStyle(fontSize: 16),
                     ),
                     const SizedBox(height: 16),
                   ],
                   const Text(
-                    'Description',
+                    'Описание',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -224,7 +224,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                     Text(
                       fullDescription.isNotEmpty 
                         ? fullDescription 
-                        : 'No description available.',
+                        : 'Описание отсутствует.',
                       style: const TextStyle(fontSize: 16),
                     ),
                 ],

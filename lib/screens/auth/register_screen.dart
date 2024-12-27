@@ -20,7 +20,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       _formKey.currentState!.save();
       if (_password != _confirmPassword) {
         setState(() {
-          _error = 'Passwords do not match';
+          _error = 'Пароли не совпадают';
         });
         return;
       }
@@ -38,7 +38,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Register')),
+      appBar: AppBar(title: Text('Регистрация')),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Form(
@@ -47,31 +47,31 @@ class _RegisterScreenState extends State<RegisterScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextFormField(
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(labelText: 'Электронная почта'),
                 validator: (value) =>
-                    value?.isEmpty ?? true ? 'Enter an email' : null,
+                    value?.isEmpty ?? true ? 'Введите электронную почту' : null,
                 onSaved: (value) => _email = value ?? '',
               ),
               SizedBox(height: 16),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(labelText: 'Пароль'),
                 obscureText: true,
                 validator: (value) =>
-                    value?.isEmpty ?? true ? 'Enter a password' : null,
+                    value?.isEmpty ?? true ? 'Введите пароль' : null,
                 onSaved: (value) => _password = value ?? '',
               ),
               SizedBox(height: 16),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Confirm Password'),
+                decoration: InputDecoration(labelText: 'Подтвердите пароль'),
                 obscureText: true,
                 validator: (value) =>
-                    value?.isEmpty ?? true ? 'Confirm your password' : null,
+                    value?.isEmpty ?? true ? 'Подтвердите пароль' : null,
                 onSaved: (value) => _confirmPassword = value ?? '',
               ),
               SizedBox(height: 24),
               ElevatedButton(
                 onPressed: _submit,
-                child: Text('Register'),
+                child: Text('Зарегистрироваться'),
               ),
               if (_error.isNotEmpty)
                 Padding(
@@ -83,7 +83,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               TextButton(
                 onPressed: () => Navigator.pushReplacementNamed(context, '/login'),
-                child: Text('Already have an account? Login'),
+                child: Text('Уже есть аккаунт? Войти'),
               ),
             ],
           ),

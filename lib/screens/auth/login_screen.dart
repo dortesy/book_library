@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login')),
+      appBar: AppBar(title: Text('Вход')),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Form(
@@ -40,23 +40,23 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextFormField(
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(labelText: 'Электронная почта'),
                 validator: (value) =>
-                    value?.isEmpty ?? true ? 'Enter an email' : null,
+                    value?.isEmpty ?? true ? 'Введите электронную почту' : null,
                 onSaved: (value) => _email = value ?? '',
               ),
               SizedBox(height: 16),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(labelText: 'Пароль'),
                 obscureText: true,
                 validator: (value) =>
-                    value?.isEmpty ?? true ? 'Enter a password' : null,
+                    value?.isEmpty ?? true ? 'Введите пароль' : null,
                 onSaved: (value) => _password = value ?? '',
               ),
               SizedBox(height: 24),
               ElevatedButton(
                 onPressed: _submit,
-                child: Text('Login'),
+                child: Text('Войти'),
               ),
               if (_error.isNotEmpty)
                 Padding(
@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextButton(
                 onPressed: () =>
                     Navigator.pushReplacementNamed(context, '/register'),
-                child: Text('Need an account? Register'),
+                child: Text('Нужен аккаунт? Зарегистрироваться'),
               ),
             ],
           ),

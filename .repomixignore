@@ -4,5 +4,8 @@
 # tmp/
 macos
 ios
+android
 windows
 linux
+pubspec.lock
+pubspec.yaml

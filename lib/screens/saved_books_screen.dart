@@ -11,7 +11,7 @@ class SavedBooksScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Library'),
+        title: Text('Моя библиотека'),
       ),
       body: StreamBuilder<List<Book>>(
         stream: _bookService.getSavedBooks(),
@@ -23,7 +23,7 @@ class SavedBooksScreen extends StatelessWidget {
           if (snapshot.hasError) {
             return Center(
               child: Text(
-                'Error loading books: ${snapshot.error}',
+                'Ошибка загрузки книг: ${snapshot.error}',
                 style: TextStyle(color: Colors.red),
               ),
             );
@@ -43,7 +43,7 @@ class SavedBooksScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 16),
                   Text(
-                    'No saved books yet',
+                    'Нет сохраненных книг',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.grey[600],
@@ -54,7 +54,7 @@ class SavedBooksScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, '/home');
                     },
-                    child: Text('Search Books'),
+                    child: Text('Искать книги'),
                   ),
                 ],
               ),

@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Book Library',
+      title: 'Библиотека книг',
       theme: ThemeData(
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
           if (snapshot.hasError) {
             return Scaffold(
               body: Center(
-                child: Text('Error: ${snapshot.error}'),
+                child: Text('Ошибка: ${snapshot.error}'),
               ),
             );
           }
@@ -116,11 +116,11 @@ class _HomeNavigatorState extends State<HomeNavigator> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Search',
+            label: 'Поиск',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.library_books),
-            label: 'My Library',
+            label: 'Моя библиотека',
           ),
         ],
       ),
@@ -130,7 +130,7 @@ class _HomeNavigatorState extends State<HomeNavigator> {
           Navigator.of(context).pushReplacementNamed('/login');
         },
         child: Icon(Icons.logout),
-        tooltip: 'Sign Out',
+        tooltip: 'Выйти',
       ),
     );
   }

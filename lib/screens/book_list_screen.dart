@@ -30,7 +30,7 @@ class _BookListScreenState extends State<BookListScreen> {
       });
     } catch (e) {
       setState(() {
-        errorMessage = 'Error searching books. Please try again.';
+        errorMessage = 'Ошибка при поиске книг. Пожалуйста, попробуйте снова.';
         isLoading = false;
       });
     }
@@ -40,7 +40,7 @@ class _BookListScreenState extends State<BookListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Book Library'),
+        title: Text('Библиотека'),
       ),
       body: Column(
         children: [
@@ -49,7 +49,7 @@ class _BookListScreenState extends State<BookListScreen> {
             child: TextField(
               controller: searchController,
               decoration: InputDecoration(
-                hintText: 'Search books...',
+                hintText: 'Поиск книг...',
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -74,7 +74,7 @@ class _BookListScreenState extends State<BookListScreen> {
           else
             Expanded(
               child: books.isEmpty
-                ? Center(child: Text('Search for books to get started'))
+                ? Center(child: Text('Начните поиск книг'))
                 : ListView.builder(
                     padding: EdgeInsets.all(16),
                     itemCount: books.length,
