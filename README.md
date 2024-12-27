@@ -63,13 +63,20 @@
 ### Как запустить проект
 
 1.  Установить Flutter SDK (минимальная версия, например, >=3.0.0).
-    
-2.  bashCopy codegit clone https://github.com/username/flutter-online-library.git
-    
-3.  bashCopy codecd flutter-online-libraryflutter pub getflutter run
-    
+2.    
+```bash
+ git clone https://github.com/dortesy/book_library.git
+```
+3.     
+```bash
+flutter pub get
+```
+  
 4.  При необходимости настроить файл firebase\_options.dart или использовать flutterfire configure для своей учётной записи Firebase.
-    
+5. 
+```bash
+flutter run
+```
 
 ### Автор
 
